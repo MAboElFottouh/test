@@ -1,7 +1,6 @@
 pandas
 Flask
 numpy
-scikit_learn
 pickle
 render_template
 gunicorn==20.0.4
