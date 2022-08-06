@@ -1,10 +1,10 @@
 import numpy as np
 from flask import Flask, request, jsonify, render_template, redirect, url_for, flash
 import pickle
-import logging
 
-app.logger.addHandler(logging.StreamHandler(sys.stdout))
-app.logger.setLevel(logging.ERROR)
+
+
+
 
 app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
@@ -32,7 +32,8 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
+
 
 
     
