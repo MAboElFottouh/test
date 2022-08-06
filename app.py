@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify, render_template, redirect, url_for, f
 import pickle
 
 app = Flask(__name__)
-model = pickle.load(open('E:/Downloads/Flask/model.pkl', 'rb'))
+model = pickle.load(open('model.pkl', 'rb'))
 
 
 @app.route('/')
