@@ -1,12 +1,9 @@
 import numpy as np
 from flask import Flask, request, jsonify, render_template, redirect, url_for, flash
 import pickle
-from app import routes
-from app import app
-
 
 app = Flask(__name__)
-model = pickle.load(open('E:/Downloads/Flask/model.pkl', 'rb'))
+model = pickle.load(open('model.pkl', 'rb'))
 
 
 @app.route('/')
@@ -30,5 +27,5 @@ def predict():
     return render_template('index.html', prediction_text='{}'.format(output))
 
 
-
-app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)
