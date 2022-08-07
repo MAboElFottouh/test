@@ -1,8 +1,9 @@
 import numpy as np
 from flask import Flask, request, jsonify, render_template, redirect, url_for, flash
 import pickle
-from app import app
 from app import routes
+from app import app
+
 
 app = Flask(__name__)
 model = pickle.load(open('E:/Downloads/Flask/model.pkl', 'rb'))
