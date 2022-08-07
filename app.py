@@ -1,6 +1,8 @@
 import numpy as np
 from flask import Flask, request, jsonify, render_template, redirect, url_for, flash
 import pickle
+from app import app
+from app import routes
 
 app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
@@ -27,5 +29,4 @@ def predict():
     return render_template('index.html', prediction_text='{}'.format(output))
 
 
-if __name__ == "__main__":
-    app.run()
+app.run()
